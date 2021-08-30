@@ -105,7 +105,7 @@
         }
         
         .animate {
-            /* animation: fade 1s linear forwards; */
+            animation: fade 0.7s linear forwards;
         }
         
         #contentSlide {
@@ -137,7 +137,8 @@
             position: relative;
             /* z-index: 200; */
         }
-        /* @-webkit-keyframes fade {
+        
+        @-webkit-keyframes fade {
             0% {
                 opacity: 0;
             }
@@ -153,7 +154,7 @@
             100% {
                 opacity: 1;
             }
-        } */
+        }
         
         @media screen and (max-width: 900px) {
             .bg-text {
@@ -357,18 +358,6 @@
         });
 
 
-        var i = 0;
-        document.getElementById("scrolBlock").addEventListener("wheel", function() {
-            // scrollevent();
-            // alert("holla");
-            let scrollToDiv = "scrolldiv" + i + "()";
-            console.log(scrollToDiv);
-            scrollToDiv;
-            i = i + 1;
-            // scrolldiv0();
-        });
-
-
         var textSectionHeight = window.getComputedStyle(document.getElementById("mainScrollTxts")).maxHeight;
         textSectionHeight = Number(textSectionHeight.slice(0, -2));
 
@@ -378,9 +367,7 @@
         var finalMaxHeight = (restHeight - (maxScreen2 * 2));
 
         document.getElementById("mainScrollTxts").style.maxHeight = divOneHeight + "px";
-        // document.getElementById("scrolBlock").style.height = divOneHeight + 25 + "px";
-        // document.getElementById("scrolBlock").style.marginBottom = -divOneHeight - 35 + "px";
-        document.getElementById("divFour").style.marginBottom = divOneHeight + "px";
+        document.getElementById("divFour").style.marginBottom = divOneHeight / 3 + "px";
         document.getElementById("divOne").style.marginTop = divOneHeight + "px";
         document.getElementById("divTwo").style.marginTop = divOneHeight + "px";
         document.getElementById("divThree").style.marginTop = divOneHeight + "px";
